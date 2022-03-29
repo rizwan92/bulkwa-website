@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "generate": "node src/generate-blogs.js",
     "build-pages": "node src/buildpages.js",
-    "build": "npm run generate && npm run build-pages",
+    "build": "mkdir -p public/blogs/ && npm run generate && npm run build-pages",
     "publish": "npm run build && firebase deploy"
   },
   "repository": {

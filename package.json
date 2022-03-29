@@ -1,0 +1,54 @@
+{
+  "name": "chikupos-web",
+  "version": "1.0.0",
+  "description": "this is chikupos website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "tailwind -i src/main.css -o public/asset/styles/style.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "node src/generate-blogs.js",
+    "build-pages": "node src/buildpages.js",
+    "build": "npm run generate && npm run build-pages",
+    "publish": "npm run build && firebase deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rizwan92/chikupos-web.git"
+  },
+  "author": "shivani panda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rizwan92/chikupos-web/issues"
+  },
+  "homepage": "https://github.com/rizwan92/chikupos-web#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-google-tag-manager": "^1.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sitemap": "^8.0.0",
+    "gulp-webp": "^4.0.1",
+    "gulp-webp-html": "^1.0.2",
+    "nodemon": "^2.0.15",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.23"
+  },
+  "dependencies": {
+    "@ampproject/toolbox-optimizer": "^2.8.8",
+    "axios": "^0.26.0",
+    "googleapis": "^95.0.0",
+    "gulp-amphtml-validator": "^1.0.6",
+    "gulp-seo": "^1.0.1",
+    "gulp-uglify": "^3.0.2",
+    "install": "^0.13.0",
+    "jimp": "^0.16.1",
+    "lru-cache": "^6.0.0",
+    "npm": "^7.13.0",
+    "nunjucks": "^3.2.3",
+    "sitemap": "^7.1.1",
+    "stream-json": "^1.7.3",
+    "through2": "^4.0.2"
+  }
+}

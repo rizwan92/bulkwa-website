@@ -35,9 +35,9 @@ const main = async () => {
     const URI = `${URL}/blogs/${blogPath}.html`;
     blogs.push({
       title: `${keyword}`,
-      description: `The restaurant software billing demo is user-friendly and easy to use. You can also customize the software to your own needs. The demo is recommended for businesses that want to improve their billing and control their costs.`,
+      description: `${keyword} Bulkwa is a simple Whatsapp Automater and bulk Whastapp message sender which helps you to manage multiple whatsapp gorup communities.`,
       url: "/blogs/" + blogPath + ".html",
-      keyword: `${keyword}, restaurant accounting software, restaurant billing software, restaurant inventory software, cloud-based restaurant inventory and billing management system, easy to use restaurant inventory and billing management system, helps restaurant owners manage their inventory and billing`,
+      keyword: `${keyword}, WhatsApp Automater, Bulk WhatsApp Message Sender, WhatsApp Marketing Tool, WhatsApp Bulk Sender, WhatsApp Broadcast Software`,
       author: author,
       publishDate: publishDate,
       URL: URI,

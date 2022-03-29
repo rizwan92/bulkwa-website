@@ -56,7 +56,7 @@ const main = async () => {
       const optimizedBlogPostHtml = await ampOptimizer.transformHtml(
         blogPostRenderer
       );
-      fs.writeFileSync(blogPostOutputPath, optimizedBlogPostHtml);
+      fs.writeFileSync(blogPostOutputPath, blogPostRenderer);
       // show console on set of 1000 blogs
       if (key % 1000 === 0) {
         console.log(key);
@@ -83,7 +83,7 @@ const generateBlogHomePage = async (tempBlogs) => {
       analytics: JSON.stringify(generateAnalytics(siteName, blogPage), null, 2),
     });
     const optimizedHtml = await ampOptimizer.transformHtml(blogRenderer);
-    fs.writeFileSync(blogOutputPath, optimizedHtml);
+    fs.writeFileSync(blogOutputPath, blogRenderer);
     console.log(blogOutputPath);
   } catch (error) {
     console.log(error);

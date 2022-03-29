@@ -38,24 +38,29 @@
             </div>
             <div class="row mt-5">
 
-                <div class="col-md-4">
+                {% for blog in blogs %}
+
+                <div class="col-md-4" style="margin:10px;">
                     <div class="card">
                         <div class="card-body">
-                            <a href="#" class="card-title mb-2">
-                                <h5>We launch new iOS & Android mobile apps</h5>
+                            <a href="{{ blog.url }}" class="card-title mb-2">
+                                <h5>{{ blog.title | safe }}</h5>
                             </a>
-                            <p class="text-muted small-xl mb-2">Sep 27, 2018</p>
-                            <p class="card-text">Nam liber tempor cum soluta nobis eleifend option congue nihil imper,
-                                consectetur adipiscing elit. <a href="#">Learn more</a></p>
+                            <p class="text-muted small-xl mb-2">{{ blog.publishDate | safe }}</p>
+                            <p class="card-text">{{ blog.description | safe }}<a href="{{ blog.url }}">Learn more</a>
+                            </p>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
+
+
             </div>
-            <div class="row mt-6">
+            <!-- <div class="row mt-6">
                 <div class="col-md-6 mx-auto text-center">
                     <a href="/blogs" class="btn btn-primary">View all posts</a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 

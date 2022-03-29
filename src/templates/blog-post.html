@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/webp" sizes="16x16" href="/assets/images/favicon.ico">
+    <title>Document</title>
+    {{ meta | safe }}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script type="application/ld+json">
+        {{ blogJSONLD | safe }}
+    </script>
+    <style amp-custom>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            background-color: #fff;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .mt-40 {
+            margin-top: 40px;
+        }
+
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-1 {
+            flex: 1;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .flex-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-end {
+            justify-content: flex-end;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .justify-around {
+            justify-content: space-around;
+        }
+
+        .justify-evenly {
+            justify-content: space-evenly;
+        }
+
+        .item-center {
+            align-items: center;
+        }
+
+        .item-start {
+            align-items: flex-start;
+        }
+
+        .item-end {
+            align-items: flex-end;
+        }
+
+        .item-baseline {
+            align-items: baseline;
+        }
+
+        .item-stretch {
+            align-items: stretch;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .max-w-sm {
+            max-width: 300px;
+        }
+
+        .max-w-xs {
+            max-width: 200px;
+        }
+
+        .max-w-lg {
+            max-width: 800px;
+        }
+
+        .max-w-xl {
+            max-width: 1000px;
+        }
+
+        .min-w-sm {
+            min-width: 300px;
+        }
+
+
+        .relative {
+            position: relative;
+        }
+
+        .text-white {
+            color: #fff;
+        }
+
+        .text-black {
+            color: #000;
+        }
+
+
+        .title:first-letter {
+            text-transform: uppercase;
+        }
+
+        .button {
+            margin: 4px;
+            border-radius: 8px;
+            min-width: 180px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .border {
+            border: 1px solid red;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: #e66807;
+            font-weight: 600;
+        }
+
+        nav {
+            background-color: #fff;
+            height: 60px;
+            border-bottom: 1px solid #ececec;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        ul li a {
+            margin-left: 10px;
+        }
+
+
+        footer {
+            min-height: 40vh;
+            background-color: #1f1927;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+
+
+        .blog-card {
+            background-color: #fff;
+            overflow: hidden;
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #efefef;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .feature-row {
+            background: #ffffff;
+            text-align: center;
+            overflow: hidden;
+        }
+
+
+        .saas-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-row-gap: 30px;
+            grid-column-gap: 30px;
+            padding: 50px 50px 40px 50px;
+        }
+
+        .saas-row {
+            text-align: center;
+        }
+
+        .saas-box {
+            text-align: center;
+        }
+
+        .saas-img {
+            cursor: pointer;
+            display: block;
+            margin: auto;
+            width: 35px;
+            height: 35px;
+        }
+
+        .saas-text {
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+
+        .saas-text::after {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 3px;
+            background-color: #5e3c18;
+            left: 50%;
+            bottom: -10px;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .saas-box:hover .saas-text::after {
+            width: 100%;
+            left: 0;
+        }
+
+
+
+        .footer-container {
+            padding: 30px;
+            display: flex;
+            margin: auto;
+            flex-wrap: wrap;
+            width: 70%;
+        }
+
+        .footer-img {
+            margin: auto;
+        }
+
+        .footer-menu>div:nth-child(2) li {
+            margin-bottom: 23px;
+        }
+
+        .footer-menu ul {
+            margin-top: 30px;
+        }
+
+        .footer-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            flex: 1;
+        }
+
+        .bottom-tab {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .bottom-tab-button {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            color: white;
+            background-color: rgb(202, 77, 77);
+            padding: 15px;
+            margin: 0;
+        }
+
+        @media only screen and (max-width: 500px) {
+            #myImg {
+                display: none;
+            }
+
+            h1 {
+                font-size: 1.3rem;
+            }
+
+            .saas-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 50px 30px 40px 30px;
+            }
+
+            #mobileVisible {
+                display: flex;
+            }
+
+            #section2 {
+                width: 100%;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <amp-analytics type="googleanalytics">
+        <script type="application/json">
+        {{ analytics | safe }}
+        </script>
+    </amp-analytics>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">
+                    <amp-img src="/assets/logo/logo.png" alt="Chikupos Logo" width="180" height="35"></amp-img>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+
+        <main>
+            <section>
+                <div class="flex justify-between item-center flex-wrap  max-w-xl">
+                    <div class="flex-1">
+                        <h1 class="title">
+                            {{ blog.title }}
+                        </h1>
+
+                        <h2 style="font-size:1rem;font-weight:400"> {{ blog.description }}</h2>
+                    </div>
+
+                    <div class="flex-1">
+                        <amp-img src="/assets/images/Banner.png" width="300" height="200" layout="responsive"
+                            style="min-width: 300px;" alt="Blog Banner">
+                        </amp-img>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="max-w-xl">
+
+                    <a style="margin-top:30px;" href="/blog/author/{{blog.author.username}}">{{ blog.author.name
+                        }} ({{
+                        publishDate }})</a>
+                    <p>
+                        <a href="https://chikupos.com" target="_blank">Chikupos </a> is a unique software that can help
+                        you boost your
+                        sales and profits. It is the
+                        only software that can do this, and the rest just make profits out of you. This software is easy
+                        to
+                        use and can be operated by anyone, regardless of their level of experience.
+                        It is also very affordable, and you can get started with it in just minutes.
+                        So, if you are looking for a way to boost your sales and profits, then you need to get <a
+                            href="https://chikupos.com" target="_blank">Chikupos </a>.
+                        It
+                        is the only software that can do this, and the rest just make profits out of you.
+                    </p>
+                    <p>
+                        <a href="https://chikupos.com" target="_blank">Chikupos </a> is a cloud-based software that
+                        helps restaurant owners in enhancing their customer
+                        experience in order to grow sales. Some of the features of our Solution include quick billing,
+                        order processing, kitchen inefficiency and staff management. Additionally, we also provide a
+                        smart inventory feature that helps restaurant owners keep track of their inventory and make
+                        better decisions about what to order and how much to order.
+                    </p>
+
+                </div>
+            </section>
+
+            <!-- <section style="padding: 0px;background-color: #FDF2EE;">
+
+                <div class="saas-row" id="about">
+                    <h3>Chikupos Feature</h3>
+                    <h4>
+                        You can also customize the software to your own business needs.
+                    </h4>
+                    <div class="saas-container">
+
+                        <div class="saas-box">
+                            <img src="/assets/icons/cloud-sync.png" alt="img" class="saas-img" width="48px"
+                                height="48px" />
+                            <span class="saas-text">Cloud Pos</span>
+                        </div>
+
+
+                        <div class="saas-box">
+                            <img src="/assets/icons/no-wifi.png" alt="img" class="saas-img" width="48px"
+                                height="48px" />
+                            <span class="saas-text">Work Offline</span>
+                        </div>
+
+                        <div class="saas-box">
+                            <img src="/assets/icons/device.png" alt="img" class="saas-img" width="48px" height="48px" />
+                            <span class="saas-text">Use any Device</span>
+                        </div>
+
+                        <div class="saas-box">
+                            <img src="/assets/icons/acceptbooking.png" alt="img" class="saas-img" width="48px"
+                                height="48px" />
+                            <span class="saas-text">Accept Booling</span>
+                        </div>
+
+
+                        <div class="saas-box">
+                            <img src="/assets/icons/table.png" alt="img" class="saas-img" width="48px" height="48px" />
+                            <span class="saas-text">Table Management</span>
+                        </div>
+
+                        <div class="saas-box">
+                            <img src="/assets/icons/kitchen.png" alt="img" class="saas-img" width="48px"
+                                height="48px" />
+                            <span class="saas-text">Kitchen Orders</span>
+                        </div>
+
+                        <div class="saas-box">
+                            <img src="/assets/icons/discount.png" alt="img" class="saas-img" width="48px"
+                                height="48px" />
+                            <span class="saas-text">Discounts</span>
+                        </div>
+
+
+                        <div class="saas-box">
+                            <img src="/assets/icons/cashier.png" alt="img" class="saas-img" width="48px"
+                                height="48px" />
+                            <span class="saas-text">Cashier & Managers</span>
+                        </div>
+
+                        <div class="saas-box">
+                            <img src="/assets/icons/expense.png" alt=" img" class="saas-img" width="48px"
+                                height="48px" />
+                            <span class="saas-text">Expenses</span>
+                        </div>
+
+                        <div class="saas-box">
+                            <img src="/assets/icons/dashboard.png" alt="img" class="saas-img" width="48px"
+                                height="48px" />
+                            <span class="saas-text">Dashboard & Reports</span>
+                        </div>
+
+
+                        <div class="saas-box">
+                            <img src="/assets/icons/multistore.png" alt="img" class="saas-img" width="48px"
+                                height="48px" />
+                            <span class="saas-text">Multiple Outlets</span>
+                        </div>
+
+
+                        <div class="saas-box">
+                            <img src="/assets/icons/api.png" alt="img" class="saas-img" width="48px" height="48px" />
+                            <span class="saas-text">Api Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <section style="padding: 10px;">
+
+                <div class="flex flex-wrap justify-between   w-full mt-40 ">
+                    <div class="flex-1 min-w-sm">
+                        <h2>1. What is Chikupos?</h2>
+                        <ul>
+                            <li>
+                                <h4>Easy to use billing software for Restaurant and Cafe</h4>
+                            </li>
+                            <li>
+                                <h4>Cloud-based SAAS product </h4>
+                            </li>
+                            <li>
+                                <h4>Made in India</h4>
+                            </li>
+                            <li>
+                                <h4>The software runs on all the platforms (mobile,web-browsers, desktop, android, ios)
+                                </h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-1 justify-center item-center min-w-sm">
+                        <amp-img src="/assets/images/Group.png" width="300" height="250" alt="Group">
+                        </amp-img>
+                    </div>
+                </div>
+                <div class="flex flex-wrap  justify-between   w-full mt-40 ">
+                    <div class="flex flex-1 justify-center item-center min-w-sm">
+                        <amp-img src="/assets/images/Group.png" width="300" height="250" alt="Group">
+                        </amp-img>
+                    </div>
+                    <div class="flex-1 ">
+                        <h2>2. What are the features of Chikupos?
+                        </h2>
+                        <ul>
+                            <li>
+                                <h4>Billing and payments</h4>
+                            </li>
+                            <li>
+                                <h4>Menu management</h4>
+                            </li>
+                            <li>
+                                <h4>Staff management</h4>
+                            </li>
+                            <li>
+                                <h4>Customer management</h4>
+                            </li>
+                            <li>
+                                <h4>Reporting and Business Insights</h4>
+                            </li>
+                            <li>
+                                <h4>Smart Inventory</h4>
+                            </li>
+                            <li>
+                                <h4>Manage your multiple outlet from single dashboard</h4>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="flex flex-wrap justify-between   w-full mt-40 ">
+                    <div class="flex-1 ">
+                        <h2>1. What if the Internet cuts off?</h2>
+                        <ul>
+                            <li>
+                                <h4>It is the first-offline solution
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>It saves your record locally
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>Then it syncs data on network availability in the background
+                                </h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-1 justify-center item-center  min-w-sm">
+                        <amp-img src="/assets/images/Group.png" width="300" height="250" alt="Group">
+                        </amp-img>
+                    </div>
+                </div>
+                <div class="flex  flex-wrap justify-between   w-full mt-40 ">
+                    <div class="flex flex-1 justify-center item-center min-w-sm">
+                        <amp-img src="/assets/images/Group.png" width="300" height="250" alt="Group">
+                        </amp-img>
+                    </div>
+                    <div class="flex-1 ">
+                        <h2>
+                            Chikupos is a free software?
+                        </h2>
+                        <ul>
+                            <li>
+                                <h4>the software is free to use with no restrictions
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>for heavier usage, we offer 300 to 600 rs per month
+                                </h4>
+                            </li>
+                            <li>
+                                <h4> By pricing the service we can ensure that the customer is benefiting from the
+                                    service.
+                                </h4>
+                            </li>
+                            <li>
+                                <h4> We can also ensure that the customer is getting what they are paying for.
+                                </h4>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <section style="background-color: #582949;margin-top: 40px;">
+        <div class="flex flex-wrap justify-evenly items-center w-full">
+            <amp-img src="/assets/images/Group.png" width="300" height="250" alt="Group">
+            </amp-img>
+            <div class="flex flex-col justify-center items-center">
+                <h2 style="color: #FAFAFB; font-weight: bold;">Best Restaurant Inventory Software</h2>
+                <h3 style="color: #FAFAFB;">
+                    Free on-boarding support No credit card Required
+                </h3>
+                <div class="flex flex-wrap">
+                    <a href="https://chikupos.com" target="_blank" class="button"
+                        style=" background-color: #FAFAFB; color: #582949; border-color: #FAFAFB; padding: 10px;">
+                        Get started for Free
+                    </a>
+
+                </div>
+                <!-- <div class="flex flex-wrap" style="color: #FAFAFB;">
+                    <p style="color: #FAFAFB;">Free 14 day trall</p>
+                    <p style="padding-left: 21px;  color: #FAFAFB;">Free 14 day trall</p>
+                    <p style="padding-left: 21px; color: #FAFAFB;">Free 14 day trall</p>
+                </div> -->
+                <h3 style="color: #FAFAFB">
+                    Need more details? <a target="_blank" href="https://wa.me/919827866360"
+                        style="color:#FC5A5A">Schedule a demo</a>
+                </h3>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="flex justify-center items-center">
+        <div class="flex flex-wrap flex-row justify-evenly items-center w-full ">
+            <div style="max-width: 250px;">
+                <amp-img src="/assets/logo/white-logo.png" alt="Chikupos Logo" width="150" height="30"
+                    style="margin-top:1rem"></amp-img>
+                <p class="text-white"> <span style="color: #FC5A5A;"><a href="https://chikupos.com"
+                            target="_blank">Chikupos
+                        </a></span>
+                    Cloud Based Restaurant Inventory and Billing Management System is an easy to use system
+                    that helps restaurant owners manage their inventory and billing. The system is cloud
+                    based, so it can be accessed from anywhere with an internet connection. It is also
+                    mobile friendly, so it can be accessed from smartphones and</p>
+            </div>
+            <div style="max-width: 250px; ">
+                <h3 class="text-white">Quick Links</h3>
+                <ul>
+                    <li class="text-white">
+                        <a href="https://chikupos.com/about-us" target="_blank">About Us</a>
+                    </li>
+                    <li class="text-white">
+                        <a href="https://chikupos.com/contact-us" target="_blank">Contact Us</a>
+                    </li>
+                    <li class="text-white">
+                        <a href="https://chikupos.com/privacy-policy" target="_blank">Privacy Policy</a>
+                    </li>
+                    <li class="text-white">
+                        <a href="https://chikupos.com/terms-and-conditions" target="_blank">Terms and
+                            Conditions</a>
+                    </li>
+                    <li class="text-white">
+                        <a href="https://chikupos.com/faq" target="_blank">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            <div style="max-width: 250px; ">
+                <h3 class="text-white">Contact</h3>
+                <ul>
+                    <li class="text-white">
+                        Boriyakhurd, Raipur, Chhattisgarh
+                    </li>
+                    <li class="text-white">
+                        <a href="mailto:chikupossoftware@gmail.com" target="_blank">chikupossoftware@gmail.com</a>
+                    </li>
+                    <li class="text-white">
+                        <a href="tel:+919827866360" target="_blank">+91 9827866360</a>
+                    </li>
+                    <li class="text-white">
+                        <a href="https://wa.me/919827866360" target="_blank">Whatsapp</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="flex justify-center items-center" style="margin-top: 3rem; margin-left: 9rem;">
+            <p class="text-white">privacy policy @ copyright 2021</p>
+
+        </div>
+
+
+        <div class="flex justify-center items-center">
+        </div>
+    </footer>
+
+
+    <section class="bottom-tab">
+        <div class="flex w-full">
+            <a href="https://wa.me/919827866360" target="_blank" class="bottom-tab-button">
+                Request
+                Demo</a>
+            <a href="https://chikupos.com" target="_blank" class="bottom-tab-button" style="background-color:purple">
+                Get
+                Started for
+                Free</a>
+        </div>
+    </section>
+</body>
+
+</html>

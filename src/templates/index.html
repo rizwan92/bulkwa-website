@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <style>
+        #menu-toggle:checked+#menu {
+            display: block;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        section {
+            font-family: "Poppins", sans-serif;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+
+        }
+    </style>
+    </head>
+
+    <body class="bg-gray-100 antialiased font-sans zero ">
+        <header class="lg:px-16 px-8 bg-white flex flex-wrap items-center py-4">
+            <div class="flex-1 flex items-center ml-4">
+                <a href="#" class="text-xl"><img src="/chikupos-LP/logo.png" alt="" width="100px" /></a>
+            </div>
+
+            <label for="menu-toggle" class="pointer-cursor md:hidden block">
+                <svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 20 20">
+                    <title>menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+            </label>
+            <input class="hidden" type="checkbox" id="menu-toggle" />
+
+            <div class="hidden md:flex md:items-center mr-4 md:w-auto w-full" id="menu">
+                <nav>
+                    <ul class="md:flex items-center justify-around text-base text-gray-700 pt-4 md:pt-0">
+                        <li><a class="md:p-4 py-3 px-0 block" href="#">Product</a></li>
+                        <li><a class="md:p-4 py-3 px-0 block" href="#">Features</a></li>
+                        <li><a class="md:p-4 py-3 px-0 block" href="#">Testimonials</a></li>
+                        <li><a class="md:p-4 py-3 px-0 block" href="#">Blog</a></li>
+                        <li><a class="md:p-4 py-3 px-0 block" href="#">Contact Us</a></li>
+                        <li>
+                            <button class="block w-52 h-10 bg-[#582949] text-white font-bold rounded-md shadow-2xl">
+                                Get Started For Free
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="">
+            <div class="flex flex-wrap">
+                <div class="flex-1 lg:pl-28   mr-4 ml-4">
+                    <h1 class="font-bold lg:text-5xl text-3xl mb-8">Focus On Your Brand</h1>
+                    <h3 class="lg:text-3xl text-xl font-semibold mb-4">
+                        Let Us Handle Your Billing System
+                    </h3>
+                    <p class="text-lg font-light text-gray-400">
+                        <span class="text-red-500">Chikupos</span> software is a cloud
+                        Inventory management platform that solves the problems that managers
+                        and administration deal with on a daily basis.
+                    </p>
+                    <div class="flex  ">
+                        <button
+                            class="h-10 bg-[#582949] text-white font-semibold mt-5 text-sm rounded-sm mr-1 pl-4 pr-4">
+                            Get Started For Free
+                        </button>
+                        <button class="h-10 bg-red-400 text-white font-semibold  text-sm mt-5 rounded-sm pl-4 pr-4">
+                            Request Demo
+                        </button>
+
+                    </div>
+                    <div class="flex  text-base  flex-wrap  mt-4">
+                        <div class="flex pr-2">
+                            <img src="chikupos-LP/check-mark@2x.png" alt="" width="24px" />
+                            free 14 days trail
+                        </div>
+
+                        <div class="flex pr-4">
+                            <img src="chikupos-LP/check-mark@2x.png" alt="" width="24px" />
+                            free 14 days trail
+                        </div>
+
+                        <div class="flex">
+                            <img src="chikupos-LP/check-mark@2x.png" alt="" width="24px" />
+                            free 14 days trail
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex-1  " style="min-width:300px">
+                    <img class="flex-1" src="chikupos-LP/banner.png" alt="" />
+                </div>
+
+            </div>
+        </section>
+        <section class="bg-[#582949] text-white mt-8 flex flex-col">
+            <div class="flex flex-col lg:justify-center lg:items-center flex-wrap ml-4 mr-4 ">
+                <button class="w-36 bg-red-300 rounded-xl text-center mb-4">
+                    What We Do
+                </button>
+                <div class="max-w-[30rem]">
+                    <h1 class="lg:text-3xl font-normal lg:text-center mb-8">
+                        We Offer smart Saas Solutions for better business
+                    </h1>
+
+                </div>
+            </div>
+            <div class="bg-[#582949] text-white mt-8 flex flex-col flex-wrap">
+                <div class="flex justify-center flex-wrap">
+                    <div class="flex  m-2 max-w-[28rem] p-4 border-2 border-[#a14b86]">
+                        <div class=" w-36 m-4">
+                            <img src="/chikupos-LP/icon1.png" alt="" width="120px" />
+                        </div>
+
+                        <div>
+                            <h2>Easy Editable</h2>
+                            <p>
+                                Quis autem veleum iure reprehende quin valuptate velit esse quam
+                                molesti conseqtur velillum dolorem eum fugiate
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex m-2 max-w-[28rem] p-4 border-2 border-[#a14b86]">
+                        <div class="w-36 m-4">
+                            <img src="/chikupos-LP/icon2.png" alt="" width="120px" />
+                        </div>
+
+                        <div>
+                            <h2>Fully Responsive</h2>
+                            <p>
+                                Quis autem veleum iure reprehende quin valuptate velit esse quam
+                                molesti conseqtur velillum dolorem eum fugiate
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center flex-wrap">
+                    <div class="flex  m-2 max-w-[28rem] p-4 border-2 border-[#a14b86]">
+                        <div class="w-36 m-4">
+                            <img src="/chikupos-LP/icon3.png" width="120px" />
+                        </div>
+                        <div>
+                            <h2>Server Solutions</h2>
+                            <p>
+                                Quis autem veleum iure reprehende quin valuptate velit esse quam
+                                molesti conseqtur velillum dolorem eum fugiate
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex  m-2  max-w-[28rem] p-4 border-2 border-[#a14b86]">
+                        <div class="w-36 m-4">
+                            <img src="/chikupos-LP/icon4.png" alt="" width="120px" />
+                        </div>
+
+                        <div>
+                            <h2>Creative Design</h2>
+                            <p>
+                                Quis autem veleum iure reprehende quin valuptate velit esse quam
+                                molesti conseqtur velillum dolorem eum fugiate
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex justify-center flex-wrap">
+                    <div class="flex  m-2 max-w-[28rem] p-4 border-2 border-[#a14b86]">
+                        <div class="w-36 m-4">
+                            <img src="/chikupos-LP/icon5.png" alt="" width="120px" />
+                        </div>
+                        <div>
+                            <h2>Well Documentation</h2>
+                            <p>
+                                Quis autem veleum iure reprehende quin valuptate velit esse quam
+                                molesti conseqtur velillum dolorem eum fugiate
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex  m-2 max-w-[28rem] p-4 border-2 border-[#a14b86]">
+                        <div class="w-36 m-4">
+                            <img src="chikupos-LP/icon6.png" alt="" width="120px" />
+                        </div>
+                        <div>
+                            <h2>Quick linkup</h2>
+                            <p>
+                                Quis autem veleum iure reprehende quin valuptate velit esse quam
+                                molesti conseqtur velillum dolorem eum fugiate
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <section class="">
+            <div class="flex justify-around  flex-wrap border-2 border-red-200 max-w-5xl ml-4 mr-4 ">
+                <div class="flex-1 border-2 lg:pr-16" style="min-width: 300px;">
+                    <h1 class="lg:text-4xl text-3xl font-bold mb-24 leading-snug">Simple But Powerfull features</h1>
+                    <img class="" src="/chikupos-LP/Illustration Of Business Investment Analysis.png" alt=""
+                        width="600px" height="600px" />
+                </div>
+                <div class="mt-32  flex flex-1 flex-col border-2">
+
+
+                    <h3 class="text-2xl text-[#582949] font-semibold">
+                        <hr size="30">
+
+                        Features
+                    </h3>
+                    <h1 class="text-4xl  text-[#582949] font-bold mb-4">
+                        Introducing Next Generation AI User Analytics
+                    </h1>
+                    <p class="text-xl pr-8">
+                        Track all your chaos in one tools,which help you to track everthing
+                        you need to run your business smoothly
+                    </p>
+                    <div class="flex  pt-4 text-xl flex-row lg:flex-col flex-wrap justify-between">
+                        <div class="flex pb-4">
+
+                            <img src="/chikupos-LP/check-mark@2x.png" alt="" width="26px" />
+                            Advanced Analytics
+                        </div>
+                        <div class="flex pb-4">
+                            <img src="/chikupos-LP/check-mark@2x.png" alt="" width="26px" />
+                            daily comsumption Report
+                        </div>
+                        <div class="flex pb-4">
+                            <img src="/chikupos-LP/check-mark@2x.png" alt="" width="26px" />
+                            sales and purchased analytics
+                        </div>
+                        <div class="flex pb-4">
+                            <img src="/chikupos-LP/check-mark@2x.png" alt="" width="26px" />
+                            Expense report
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="">
+            <div class="flex justify-around  flex-wrap max-w-5xl ml-4 mr-4">
+                <div class="flex-1 lg:pr-16">
+                    <div class="flex">
+
+                        <h3 class="text-2xl pb-8">Features</h3>
+                    </div>
+
+                    <h1 class="text-4xl font-semibold pb-4 leading-snug text-[#582949]">
+                        A Better Way to manage multiple Franchise store
+                    </h1>
+                    <p class="text-xl font-light">
+                        Business has consistently delivered about and beyond my
+                        Expectations! and brilliant design work, incredible response time
+                        and a really friendly team
+                    </p>
+                    <div class="flex  pt-4 text-xl flex-col flex-wrap justify-between font-normal">
+                        <div class="flex pb-4">
+                            <img src="/chikupos-LP/check-mark@2x.png" alt="" width="26px" />
+                            Curated Valuation Services
+                        </div>
+                        <div class="flex pb-4">
+                            <img src="/chikupos-LP/check-mark@2x.png" alt="" width="26px" />
+                            Interactive Developnment Education
+                        </div>
+                        <div class="flex pb-4">
+                            <img src="/chikupos-LP/check-mark@2x.png" alt="" width="26px" />
+                            Awesome Educations Services
+                        </div>
+                        <div class="flex pb-4">
+                            <img src="/chikupos-LP/check-mark@2x.png" alt="" width="26px" />
+                            Curated Valuation Services
+                        </div>
+                    </div>
+                </div>
+                <div class=" flex-1 border-2 border-black">
+                    <h1 class="text-4xl font-bold pl-24 leading-normal">
+                        Manage Multiple Store using single tools
+                    </h1>
+                    <img src="/chikupos-LP/Shop 9.png" alt="" />
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex justify-around items-center bg-[#582949] w-full lg:pt-16 lg:pb-16 flex-wrap pr-4 pl-4">
+                <div class="img11">
+                    <img src="/chikupos-LP/THG_M132_03.png" alt="" width="400px" style="" />
+                </div>
+                <div class="text-white pt-8 text-left">
+                    <h1 class="font-bold text-3xl pb-3">
+                        Get started now,try a live demo
+                    </h1>
+                    <p class="text-lg pb-4 font-thin">
+                        Free on-boarding support.no credit card required
+                    </p>
+                    <button style="
+                    width: 260px;
+                    height: 35px;
+                    background-color: lightcoral;
+                    color: white;
+                    font-weight: 700;
+                    border-radius: 5px;
+                  ">
+                        Get Started For Free
+                    </button>
+                    <p class="pt-8 font-light">Need more details?Schedule a demo.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="flex justify-center   flex-wrap max-w-4xl mr-4 ml-4">
+                <div class="flex-1 lg:pr-8 " style="min-width: 300px; ">
+                    <h1 class="text-4xl font-bold leading-snug mb-16">Manage Business more Smartest way</h1>
+                    <img src="/chikupos-LP/THG_M91_010.png" alt="">
+                </div>
+                <div class=" flex-1  ">
+                    <h3 class="mt-16 text-2xl text-[#582949] mb-4">Features</h3>
+                    <h1 class="text-4xl font-bold mb-4">Fastest Bill Generate & Payment Settlement</h1>
+                    <p class="text-xl font-light">
+                        Business has consistently delivered about and beyond my
+                        Expectations! and brilliant design work, incredible response time
+                        and a really friendly team
+                    </p>
+                    <div class="flex pt-4 text-xl flex-col  justify-between font-normal">
+                        <div class="flex pb-4">
+                            <img src="/chikupos-LP/check-mark@2x.png" alt="" width="26px" />
+                            Curated Valuation Services
+                        </div>
+                        <div class="flex pb-4">
+                            <img src="/chikupos-LP/check-mark@2x.png" alt="" width="26px" />
+                            Interactive Developnment Education
+                        </div>
+                        <div class="flex pb-4">
+                            <img src="/chikupos-LP/check-mark@2x.png" alt="" width="26px" />
+                            Awesome Educations Services
+                        </div>
+                        <div class="flex pb-4">
+                            <img src="/chikupos-LP/check-mark@2x.png" alt="" width="26px" />
+                            Curated Valuation Services
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="flex flex-col justify-evenly flex-wrap max-w-5xl mr-4 ml-4 ">
+                <div class="">
+                    <h1 class="text-center mb-8 text-5xl font-bold">Testimonials</h1>
+                </div>
+                <div class="flex justify-around  flex-wrap ">
+                    <div class=" mt-24 pt-8 flex flex-1 rounded-md shadow-2xl" style="min-width: 300px;">
+                        <div class="">
+                            <img src="/chikupos-LP/check-mark@2x.png" alt="" width="300px">
+                        </div>
+                        <div>
+                            <p class="text-lg font-light mb-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Quidem pariatur consequatur doloremque facere ex, error vitae do</p>
+                            <span class="text-xl font-semibold pb-16">MarLon L. Gardon</span>
+                        </div>
+                    </div>
+                    <div class="flex-1  flex justify-center items-center" style="min-width: 300px;">
+                        <img src="/chikupos-LP/review.png" alt="" width="500px" height="400px">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+
+            <div style="background-color: black;">
+                <div class="container mx-auto px-6 lg:px-20 py-12">
+                    <div class="lg:flex">
+                        <div class="w-full lg:w-2/3">
+                            <div class="lg:flex">
+                                <div class="w-full mb-12 lg:mb-0 lg:w-1/2">
+                                    <h2 class="font-bold text-xl text-gray-100 mb-4"><img
+                                            src="/chikupos-LP/footerlogo.png" alt=""></h2>
+
+                                    <p class="text-xl text-white font-light">
+                                        <span class="text-red-500">Chikupos</span> software is a cloud
+                                        Inventory management platform that solves the problems that managers
+                                        and administration deal with on a daily basis.
+                                    </p>
+
+
+                                </div>
+                                <div class="w-full lg:w-1/2 lg:flex lg:px-6 ">
+                                    <div class="w-full mb-6 lg:mb-0 lg:w-1/2">
+                                        <h2 class="font-bold text-gray-100 mb-4">
+                                            Quick links</h2>
+                                        <ul class="text-gray-500 text-sm">
+                                            <li class="pt-1 pb-2">About us</li>
+                                            <li class="pt-1 pb-2">pricing</li>
+                                            <li class="pt-1 pb-2">Features</li>
+                                            <li class="pt-1 pb-2">Blog</li>
+                                            <li class="pt-1 pb-2">Privacy Policy</li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-full mb-6 lg:mb-0 lg:w-1/2">
+                                        <h2 class="font-bold text-gray-100 mb-4">
+                                            Get In Touch</h2>
+                                        <ul class="text-gray-500 text-sm">
+                                            <ul>
+                                                <li class="pt-1 pb-2">Address:</li>
+                                                <li class="pt-1 pb-2">Raipur Chhattisgarh</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="pt-1 pb-2">contact us</li>
+                                                <li class="pt-1 pb-2">09584478633</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="pt-1 pb-2">Email id:</li>
+                                                <li class="pt-1 pb-2">chikupos@gmail.com</li>
+                                            </ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/3">
+                            <h2 class=" font-bold text-gray-100 mb-4">
+                                Follow Us
+                            </h2>
+                            <div class="mb-8 flex ">
+                                <img class="pr-2" src="/chikupos-LP/5365678_fb_facebook_facebook logo_icon.png" alt=""
+                                    width="26px">
+
+                                <img class="pr-2 " src="/chikupos-LP/5296765_camera_instagram_instagram logo_icon.png"
+                                    alt="" width="26px">
+                                <img class="" src="/chikupos-LP/5296516_tweet_twitter_twitter logo_icon.png" alt=""
+                                    width="26px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background-color: black;">
+                <div class="container mx-auto px-6 lg:px-20 py-6">
+                    <div class="flex  text-white mb-1">
+                        Privacy policy © copyright 2021
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+        </footer>
+    </body>
+
+</html>

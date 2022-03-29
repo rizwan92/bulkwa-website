@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chikupos.com/sitemap/sitemap-index.xml
